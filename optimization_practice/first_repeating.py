@@ -83,3 +83,14 @@ element, giving an overall O(n) algorithm.
 =================================================
 
 """
+def first_repeating_brute_force(arr):
+    n = len(arr)
+    # Outer loop moves through the list
+    for i in range(n):
+        # Inner loop checks all elements before index i
+        for j in range(i):
+            if arr[i] == arr[j]:
+                return arr[i]
+    
+    return -1
+   
